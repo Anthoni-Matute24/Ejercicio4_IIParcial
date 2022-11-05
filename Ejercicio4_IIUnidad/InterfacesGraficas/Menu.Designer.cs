@@ -37,11 +37,12 @@
             this.SoporteToolStripTabItem = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.CelularToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.ComputoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.TicketToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
+            this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ComputoToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -50,6 +51,7 @@
             this.toolStripEx1.SuspendLayout();
             this.toolStripTabItem3.Panel.SuspendLayout();
             this.toolStripEx2.SuspendLayout();
+            this.toolStripEx4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
@@ -76,7 +78,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.SoporteToolStripTabItem;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(607, 138);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -139,6 +141,7 @@
             // ribbonControlAdv1.ribbonPanel2
             // 
             this.SoporteToolStripTabItem.Panel.Controls.Add(this.toolStripEx1);
+            this.SoporteToolStripTabItem.Panel.Controls.Add(this.toolStripEx4);
             this.SoporteToolStripTabItem.Panel.Name = "ribbonPanel2";
             this.SoporteToolStripTabItem.Panel.ScrollPosition = 0;
             this.SoporteToolStripTabItem.Panel.TabIndex = 3;
@@ -156,14 +159,13 @@
             this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx1.Image = null;
             this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CelularToolStripButton,
-            this.ComputoToolStripButton});
+            this.CelularToolStripButton});
             this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx1.Name = "toolStripEx1";
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(169, 72);
+            this.toolStripEx1.Size = new System.Drawing.Size(67, 72);
             this.toolStripEx1.TabIndex = 0;
             // 
             // CelularToolStripButton
@@ -177,18 +179,6 @@
             this.CelularToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CelularToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CelularToolStripButton.Click += new System.EventHandler(this.CelularToolStripButton_Click);
-            // 
-            // ComputoToolStripButton
-            // 
-            this.ComputoToolStripButton.Image = global::InterfacesGraficas.Properties.Resources.ajustes;
-            this.ComputoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ComputoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ComputoToolStripButton.Name = "ComputoToolStripButton";
-            this.ComputoToolStripButton.Size = new System.Drawing.Size(102, 48);
-            this.ComputoToolStripButton.Text = "Equipo Cómputo ";
-            this.ComputoToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ComputoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ComputoToolStripButton.Click += new System.EventHandler(this.ComputoToolStripButton_Click);
             // 
             // toolStripTabItem3
             // 
@@ -246,6 +236,34 @@
             this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2016Black);
             this.tabbedMDIManager1.ThemeName = "TabRendererOffice2016Black";
             // 
+            // toolStripEx4
+            // 
+            this.toolStripEx4.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx4.Image = null;
+            this.toolStripEx4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ComputoToolStripButton});
+            this.toolStripEx4.Location = new System.Drawing.Point(69, 1);
+            this.toolStripEx4.Name = "toolStripEx4";
+            this.toolStripEx4.Office12Mode = false;
+            this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.toolStripEx4.Size = new System.Drawing.Size(111, 72);
+            this.toolStripEx4.TabIndex = 1;
+            // 
+            // ComputoToolStripButton
+            // 
+            this.ComputoToolStripButton.Image = global::InterfacesGraficas.Properties.Resources.ajustes;
+            this.ComputoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ComputoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ComputoToolStripButton.Name = "ComputoToolStripButton";
+            this.ComputoToolStripButton.Size = new System.Drawing.Size(102, 48);
+            this.ComputoToolStripButton.Text = "Equipo Cómputo ";
+            this.ComputoToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ComputoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ComputoToolStripButton.Click += new System.EventHandler(this.ComputoToolStripButton_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -276,6 +294,8 @@
             this.toolStripTabItem3.Panel.PerformLayout();
             this.toolStripEx2.ResumeLayout(false);
             this.toolStripEx2.PerformLayout();
+            this.toolStripEx4.ResumeLayout(false);
+            this.toolStripEx4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -287,11 +307,12 @@
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem3;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
         private System.Windows.Forms.ToolStripButton CelularToolStripButton;
-        private System.Windows.Forms.ToolStripButton ComputoToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
         private System.Windows.Forms.ToolStripButton TicketToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
         private System.Windows.Forms.ToolStripButton UsuarioToolStripButton;
         private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
+        private System.Windows.Forms.ToolStripButton ComputoToolStripButton;
     }
 }

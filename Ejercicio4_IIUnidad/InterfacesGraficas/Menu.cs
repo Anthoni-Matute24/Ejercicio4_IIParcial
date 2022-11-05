@@ -52,25 +52,6 @@ namespace InterfacesGraficas
             _celularesForm = null;
         }
 
-        private void ComputoToolStripButton_Click(object sender, System.EventArgs e)
-        {
-            if (_equipoComputoForm == null)
-            {
-                _equipoComputoForm = new EquipoComputoForm();
-                _equipoComputoForm.MdiParent = this;
-                _equipoComputoForm.FormClosed += _equipoComputoForm_FormClosed;
-                _equipoComputoForm.Show();
-            }
-            else
-            {
-                _equipoComputoForm.Activate();
-            }
-        }
-        private void _equipoComputoForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            _equipoComputoForm = null;
-        }
-
         private void TicketToolStripButton_Click(object sender, System.EventArgs e)
         {
             if (_ticketsForm == null)
@@ -88,6 +69,25 @@ namespace InterfacesGraficas
         private void _ticketsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _ticketsForm = null;
+        }
+
+        private void ComputoToolStripButton_Click_1(object sender, System.EventArgs e)
+        {
+            if (_equipoComputoForm == null)
+            {
+                _equipoComputoForm = new EquipoComputoForm();
+                _equipoComputoForm.MdiParent = this;
+                _equipoComputoForm.FormClosed += _equipoComputoForm_FormClosed;
+                _equipoComputoForm.Show();
+            }
+            else
+            {
+                _equipoComputoForm.Activate();
+            }
+        }
+        private void _equipoComputoForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _equipoComputoForm = null;
         }
     }
 }

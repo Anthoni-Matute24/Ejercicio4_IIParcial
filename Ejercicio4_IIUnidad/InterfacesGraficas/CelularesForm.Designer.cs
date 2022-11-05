@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ModeloTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.MarcaTextBox = new System.Windows.Forms.TextBox();
@@ -45,6 +49,11 @@
             this.NombreClienteTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.ModificarButton = new System.Windows.Forms.Button();
+            this.CelularesDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.CelularesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ModeloTextBox
@@ -95,7 +104,7 @@
             this.AlmacenamientoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AlmacenamientoTextBox.Enabled = false;
             this.AlmacenamientoTextBox.ForeColor = System.Drawing.Color.White;
-            this.AlmacenamientoTextBox.Location = new System.Drawing.Point(51, 287);
+            this.AlmacenamientoTextBox.Location = new System.Drawing.Point(51, 286);
             this.AlmacenamientoTextBox.Name = "AlmacenamientoTextBox";
             this.AlmacenamientoTextBox.Size = new System.Drawing.Size(309, 27);
             this.AlmacenamientoTextBox.TabIndex = 7;
@@ -104,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(47, 263);
+            this.label3.Location = new System.Drawing.Point(47, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 21);
             this.label3.TabIndex = 6;
@@ -116,7 +125,7 @@
             this.RAMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RAMTextBox.Enabled = false;
             this.RAMTextBox.ForeColor = System.Drawing.Color.White;
-            this.RAMTextBox.Location = new System.Drawing.Point(51, 351);
+            this.RAMTextBox.Location = new System.Drawing.Point(51, 346);
             this.RAMTextBox.Name = "RAMTextBox";
             this.RAMTextBox.Size = new System.Drawing.Size(309, 27);
             this.RAMTextBox.TabIndex = 9;
@@ -125,7 +134,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(47, 327);
+            this.label4.Location = new System.Drawing.Point(47, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 21);
             this.label4.TabIndex = 8;
@@ -137,7 +146,7 @@
             this.DescripcionProblemaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DescripcionProblemaTextBox.Enabled = false;
             this.DescripcionProblemaTextBox.ForeColor = System.Drawing.Color.White;
-            this.DescripcionProblemaTextBox.Location = new System.Drawing.Point(51, 416);
+            this.DescripcionProblemaTextBox.Location = new System.Drawing.Point(51, 405);
             this.DescripcionProblemaTextBox.Name = "DescripcionProblemaTextBox";
             this.DescripcionProblemaTextBox.Size = new System.Drawing.Size(309, 27);
             this.DescripcionProblemaTextBox.TabIndex = 11;
@@ -146,7 +155,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(47, 392);
+            this.label5.Location = new System.Drawing.Point(47, 381);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(231, 21);
             this.label5.TabIndex = 10;
@@ -158,15 +167,15 @@
             this.GenerarButton.FlatAppearance.BorderSize = 0;
             this.GenerarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GenerarButton.ForeColor = System.Drawing.Color.White;
-            this.GenerarButton.Image = global::InterfacesGraficas.Properties.Resources.Generar;
+            this.GenerarButton.Image = global::InterfacesGraficas.Properties.Resources.salvar;
             this.GenerarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GenerarButton.Location = new System.Drawing.Point(414, 320);
             this.GenerarButton.Name = "GenerarButton";
             this.GenerarButton.Size = new System.Drawing.Size(167, 32);
             this.GenerarButton.TabIndex = 18;
-            this.GenerarButton.Text = "Generar Ticket";
-            this.GenerarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GenerarButton.Text = "Guardar";
             this.GenerarButton.UseVisualStyleBackColor = false;
+            this.GenerarButton.Click += new System.EventHandler(this.GenerarButton_Click);
             // 
             // CancelarButton
             // 
@@ -176,12 +185,13 @@
             this.CancelarButton.ForeColor = System.Drawing.Color.White;
             this.CancelarButton.Image = global::InterfacesGraficas.Properties.Resources.boton_eliminar;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarButton.Location = new System.Drawing.Point(414, 253);
+            this.CancelarButton.Location = new System.Drawing.Point(414, 223);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(167, 32);
             this.CancelarButton.TabIndex = 17;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = false;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // CrearButton
             // 
@@ -191,12 +201,13 @@
             this.CrearButton.ForeColor = System.Drawing.Color.White;
             this.CrearButton.Image = global::InterfacesGraficas.Properties.Resources.NuevoTicket;
             this.CrearButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CrearButton.Location = new System.Drawing.Point(414, 184);
+            this.CrearButton.Location = new System.Drawing.Point(414, 175);
             this.CrearButton.Name = "CrearButton";
             this.CrearButton.Size = new System.Drawing.Size(167, 32);
             this.CrearButton.TabIndex = 13;
             this.CrearButton.Text = "Crear Ticket";
             this.CrearButton.UseVisualStyleBackColor = false;
+            this.CrearButton.Click += new System.EventHandler(this.CrearButton_Click);
             // 
             // IdentidadTextBox
             // 
@@ -240,12 +251,74 @@
             this.label7.TabIndex = 28;
             this.label7.Text = "Identidad:";
             // 
+            // ModificarButton
+            // 
+            this.ModificarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.ModificarButton.FlatAppearance.BorderSize = 0;
+            this.ModificarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ModificarButton.ForeColor = System.Drawing.Color.White;
+            this.ModificarButton.Image = global::InterfacesGraficas.Properties.Resources.boton_editar;
+            this.ModificarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ModificarButton.Location = new System.Drawing.Point(414, 272);
+            this.ModificarButton.Name = "ModificarButton";
+            this.ModificarButton.Size = new System.Drawing.Size(167, 32);
+            this.ModificarButton.TabIndex = 32;
+            this.ModificarButton.Text = "Modificar";
+            this.ModificarButton.UseVisualStyleBackColor = false;
+            this.ModificarButton.Click += new System.EventHandler(this.ModificarButton_Click);
+            // 
+            // CelularesDataGridView
+            // 
+            this.CelularesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CelularesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.CelularesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.CelularesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.CelularesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CelularesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CelularesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.CelularesDataGridView.ColumnHeadersHeight = 30;
+            this.CelularesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.CelularesDataGridView.EnableHeadersVisualStyles = false;
+            this.CelularesDataGridView.GridColor = System.Drawing.Color.Silver;
+            this.CelularesDataGridView.Location = new System.Drawing.Point(0, 452);
+            this.CelularesDataGridView.Name = "CelularesDataGridView";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CelularesDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.CelularesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.CelularesDataGridView.Size = new System.Drawing.Size(642, 110);
+            this.CelularesDataGridView.TabIndex = 33;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CelularesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.ClientSize = new System.Drawing.Size(644, 498);
+            this.ClientSize = new System.Drawing.Size(642, 562);
+            this.Controls.Add(this.CelularesDataGridView);
+            this.Controls.Add(this.ModificarButton);
             this.Controls.Add(this.IdentidadTextBox);
             this.Controls.Add(this.NombreClienteTextBox);
             this.Controls.Add(this.label6);
@@ -269,6 +342,9 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CelularesForm";
             this.Text = "CelularesForm";
+            this.Load += new System.EventHandler(this.CelularesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CelularesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +369,8 @@
         private System.Windows.Forms.TextBox NombreClienteTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button ModificarButton;
+        private System.Windows.Forms.DataGridView CelularesDataGridView;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

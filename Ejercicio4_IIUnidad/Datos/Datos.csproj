@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadenaConexion.cs" />
+    <Compile Include="CelularesDatos.cs" />
+    <Compile Include="EquipoComputoDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
