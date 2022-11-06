@@ -93,6 +93,16 @@ namespace InterfacesGraficas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apoyo_tecnico {
+            get {
+                object obj = ResourceManager.GetObject("apoyo-tecnico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap basura {
             get {
                 object obj = ResourceManager.GetObject("basura", resourceCulture);
@@ -156,6 +166,16 @@ namespace InterfacesGraficas.Properties {
         internal static System.Drawing.Bitmap Generar {
             get {
                 object obj = ResourceManager.GetObject("Generar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

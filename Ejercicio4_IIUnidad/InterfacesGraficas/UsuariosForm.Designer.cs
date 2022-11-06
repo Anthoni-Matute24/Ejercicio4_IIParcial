@@ -287,7 +287,7 @@
             this.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsuariosDataGridView.EnableHeadersVisualStyles = false;
             this.UsuariosDataGridView.GridColor = System.Drawing.Color.Silver;
-            this.UsuariosDataGridView.Location = new System.Drawing.Point(2, 295);
+            this.UsuariosDataGridView.Location = new System.Drawing.Point(2, 306);
             this.UsuariosDataGridView.Name = "UsuariosDataGridView";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
@@ -303,7 +303,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.UsuariosDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.UsuariosDataGridView.Size = new System.Drawing.Size(616, 149);
+            this.UsuariosDataGridView.Size = new System.Drawing.Size(616, 138);
             this.UsuariosDataGridView.TabIndex = 18;
             // 
             // UsuariosForm

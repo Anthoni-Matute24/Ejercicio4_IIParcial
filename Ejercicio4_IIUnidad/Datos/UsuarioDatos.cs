@@ -8,7 +8,7 @@ namespace Datos
 {
     public class UsuarioDatos
     {
-        public async Task<bool> LoginAsync(string correo, string clave)
+        public async Task<bool> LoginAsync(string usuario, string clave)
         {
             // Devuelve False, por que el "Codigo y Clave" son incorrectos
             bool valido = false;
@@ -16,7 +16,7 @@ namespace Datos
             try
             {
                 // Si el "Codigo y Claves" son correctos, entonces devolverá 1
-                string sql = "SELECT 1 FROM Usuario WHERE Correo=@Correo AND Clave=@Clave;";
+                string sql = "SELECT 1 FROM Usuario WHERE Codigo=@Codigo AND Clave=@Clave;";
 
                 // Clase conexión para acceder a la BD
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
@@ -32,7 +32,7 @@ namespace Datos
 
                         // Objeto: comando, pasa parametro a:
                         // "Código" -> Tipo dato: VarChar, Tamaño: 20 caracteres 
-                        comando.Parameters.Add("@Correo", MySqlDbType.VarChar, 50).Value = correo;
+                        comando.Parameters.Add("@Codigo", MySqlDbType.VarChar, 25).Value = usuario;
                         // "Clave"->Tipo dato: VarChar, Tamaño: 120 caracteres
                         comando.Parameters.Add("@Clave", MySqlDbType.VarChar, 40).Value = clave;
 

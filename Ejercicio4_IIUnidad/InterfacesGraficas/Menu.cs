@@ -9,8 +9,7 @@ namespace InterfacesGraficas
             InitializeComponent();
         }
         UsuariosForm _usuariosForm = null;
-        CelularesForm _celularesForm = null; 
-        EquipoComputoForm _equipoComputoForm = null;
+        EquipoTecnologicoForm _celularesForm = null; 
         TicketsForm _ticketsForm = null;
 
         private void toolStripButton1_Click(object sender, System.EventArgs e)
@@ -36,7 +35,7 @@ namespace InterfacesGraficas
         {
             if (_celularesForm == null)
             {
-                _celularesForm = new CelularesForm();
+                _celularesForm = new EquipoTecnologicoForm();
                 _celularesForm.MdiParent = this;
                 _celularesForm.FormClosed += _celularesForm_FormClosed;
                 _celularesForm.Show();
@@ -69,25 +68,6 @@ namespace InterfacesGraficas
         private void _ticketsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _ticketsForm = null;
-        }
-
-        private void ComputoToolStripButton_Click_1(object sender, System.EventArgs e)
-        {
-            if (_equipoComputoForm == null)
-            {
-                _equipoComputoForm = new EquipoComputoForm();
-                _equipoComputoForm.MdiParent = this;
-                _equipoComputoForm.FormClosed += _equipoComputoForm_FormClosed;
-                _equipoComputoForm.Show();
-            }
-            else
-            {
-                _equipoComputoForm.Activate();
-            }
-        }
-        private void _equipoComputoForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            _equipoComputoForm = null;
         }
     }
 }

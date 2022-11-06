@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.NombreClienteTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.IdentidadTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.SoporteTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TicketTextBox = new System.Windows.Forms.TextBox();
             this.RespuestaTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SolicitudTextBox = new System.Windows.Forms.TextBox();
@@ -57,12 +60,12 @@
             this.PrecioTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.GuardarButton = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.TicketTextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,13 +77,14 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(796, 100);
+            this.groupBox1.Size = new System.Drawing.Size(772, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // FechaDateTimePicker
             // 
             this.FechaDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            this.FechaDateTimePicker.Enabled = false;
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaDateTimePicker.Location = new System.Drawing.Point(582, 37);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
@@ -128,16 +132,16 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre:";
             // 
-            // NombreTextBox
+            // NombreClienteTextBox
             // 
-            this.NombreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
-            this.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NombreTextBox.ForeColor = System.Drawing.Color.White;
-            this.NombreTextBox.Location = new System.Drawing.Point(502, 51);
-            this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.ReadOnly = true;
-            this.NombreTextBox.Size = new System.Drawing.Size(235, 27);
-            this.NombreTextBox.TabIndex = 3;
+            this.NombreClienteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            this.NombreClienteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NombreClienteTextBox.ForeColor = System.Drawing.Color.White;
+            this.NombreClienteTextBox.Location = new System.Drawing.Point(502, 51);
+            this.NombreClienteTextBox.Name = "NombreClienteTextBox";
+            this.NombreClienteTextBox.ReadOnly = true;
+            this.NombreClienteTextBox.Size = new System.Drawing.Size(235, 27);
+            this.NombreClienteTextBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -158,6 +162,7 @@
             this.IdentidadTextBox.Name = "IdentidadTextBox";
             this.IdentidadTextBox.Size = new System.Drawing.Size(156, 27);
             this.IdentidadTextBox.TabIndex = 2;
+            this.IdentidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdentidadTextBox_KeyPress);
             // 
             // label5
             // 
@@ -196,14 +201,14 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.NombreTextBox);
+            this.groupBox2.Controls.Add(this.NombreClienteTextBox);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.IdentidadTextBox);
             this.groupBox2.Location = new System.Drawing.Point(0, 110);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(796, 100);
+            this.groupBox2.Size = new System.Drawing.Size(772, 100);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -221,9 +226,31 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(0, 218);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(796, 145);
+            this.groupBox3.Size = new System.Drawing.Size(772, 145);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Silver;
+            this.label14.Location = new System.Drawing.Point(170, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 21);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Ticket:";
+            // 
+            // TicketTextBox
+            // 
+            this.TicketTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            this.TicketTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TicketTextBox.ForeColor = System.Drawing.Color.White;
+            this.TicketTextBox.Location = new System.Drawing.Point(236, 23);
+            this.TicketTextBox.Name = "TicketTextBox";
+            this.TicketTextBox.ReadOnly = true;
+            this.TicketTextBox.Size = new System.Drawing.Size(114, 27);
+            this.TicketTextBox.TabIndex = 13;
             // 
             // RespuestaTextBox
             // 
@@ -281,9 +308,9 @@
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.PrecioTextBox);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Location = new System.Drawing.Point(0, 368);
+            this.groupBox4.Location = new System.Drawing.Point(0, 372);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(796, 112);
+            this.groupBox4.Size = new System.Drawing.Size(772, 112);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             // 
@@ -301,10 +328,10 @@
             // 
             this.TotalTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
             this.TotalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TotalTextBox.Enabled = false;
             this.TotalTextBox.ForeColor = System.Drawing.Color.White;
             this.TotalTextBox.Location = new System.Drawing.Point(640, 61);
             this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(97, 27);
             this.TotalTextBox.TabIndex = 14;
             // 
@@ -322,7 +349,6 @@
             // 
             this.DescuentoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
             this.DescuentoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DescuentoTextBox.Enabled = false;
             this.DescuentoTextBox.ForeColor = System.Drawing.Color.White;
             this.DescuentoTextBox.Location = new System.Drawing.Point(457, 61);
             this.DescuentoTextBox.Name = "DescuentoTextBox";
@@ -343,10 +369,10 @@
             // 
             this.ISVTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
             this.ISVTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ISVTextBox.Enabled = false;
             this.ISVTextBox.ForeColor = System.Drawing.Color.White;
             this.ISVTextBox.Location = new System.Drawing.Point(236, 61);
             this.ISVTextBox.Name = "ISVTextBox";
+            this.ISVTextBox.ReadOnly = true;
             this.ISVTextBox.Size = new System.Drawing.Size(97, 27);
             this.ISVTextBox.TabIndex = 10;
             // 
@@ -364,12 +390,12 @@
             // 
             this.PrecioTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
             this.PrecioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PrecioTextBox.Enabled = false;
             this.PrecioTextBox.ForeColor = System.Drawing.Color.White;
             this.PrecioTextBox.Location = new System.Drawing.Point(83, 61);
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(97, 27);
             this.PrecioTextBox.TabIndex = 8;
+            this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
             // label8
             // 
@@ -390,41 +416,24 @@
             this.GuardarButton.ForeColor = System.Drawing.Color.White;
             this.GuardarButton.Image = global::InterfacesGraficas.Properties.Resources.salvar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(570, 486);
+            this.GuardarButton.Location = new System.Drawing.Point(570, 490);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(167, 32);
             this.GuardarButton.TabIndex = 15;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = false;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
-            // label14
+            // errorProvider1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(170, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 21);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Ticket:";
-            // 
-            // TicketTextBox
-            // 
-            this.TicketTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
-            this.TicketTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TicketTextBox.ForeColor = System.Drawing.Color.White;
-            this.TicketTextBox.Location = new System.Drawing.Point(236, 23);
-            this.TicketTextBox.Name = "TicketTextBox";
-            this.TicketTextBox.ReadOnly = true;
-            this.TicketTextBox.Size = new System.Drawing.Size(114, 27);
-            this.TicketTextBox.TabIndex = 13;
+            this.errorProvider1.ContainerControl = this;
             // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.ClientSize = new System.Drawing.Size(796, 548);
+            this.ClientSize = new System.Drawing.Size(772, 545);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -436,6 +445,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketsForm";
             this.Text = "TicketsForm";
+            this.Load += new System.EventHandler(this.TicketsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -444,6 +454,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,7 +468,7 @@
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.MaskedTextBox IdentidadTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.TextBox NombreClienteTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -479,6 +490,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox TicketTextBox;
     }

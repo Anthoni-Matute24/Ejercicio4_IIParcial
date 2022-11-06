@@ -13,10 +13,10 @@ namespace InterfacesGraficas
 
         private async void AccederButton_Click(object sender, EventArgs e)
         {
-            if (CorreoTextBox.Text == String.Empty)
+            if (UsuarioTextBox.Text == String.Empty)
             {
-                errorProvider1.SetError(CorreoTextBox, "Ingrese un código de usuario");
-                CorreoTextBox.Focus();
+                errorProvider1.SetError(UsuarioTextBox, "Ingrese un código de usuario");
+                UsuarioTextBox.Focus();
                 return;
 
             }
@@ -34,12 +34,14 @@ namespace InterfacesGraficas
             UsuarioDatos userDatos = new UsuarioDatos();
 
             // Llamada del método "LoginAsync" para validar el acceso al sistema
-            bool valido = await userDatos.LoginAsync(CorreoTextBox.Text, ClaveTextBox.Text);
+            bool valido = await userDatos.LoginAsync(UsuarioTextBox.Text, ClaveTextBox.Text);
 
             if (valido)
             {
                 // Muestra el menú principal
                 Menu formulario = new Menu();
+                VariableGlobal.UsuarioLogin = UsuarioTextBox.Text;
+
                 Hide(); // Oculta el formulario Login 
                 formulario.Show();
             }

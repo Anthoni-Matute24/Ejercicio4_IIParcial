@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AccederButton = new System.Windows.Forms.Button();
-            this.CorreoTextBox = new System.Windows.Forms.TextBox();
+            this.UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.ClaveTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::InterfacesGraficas.Properties.Resources.tierra;
+            this.pictureBox1.Image = global::InterfacesGraficas.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(44, 83);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 160);
@@ -71,9 +71,9 @@
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(313, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 21);
+            this.label1.Size = new System.Drawing.Size(86, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "CORREO:";
+            this.label1.Text = "USUARIO:";
             // 
             // AccederButton
             // 
@@ -89,15 +89,15 @@
             this.AccederButton.UseVisualStyleBackColor = false;
             this.AccederButton.Click += new System.EventHandler(this.AccederButton_Click);
             // 
-            // CorreoTextBox
+            // UsuarioTextBox
             // 
-            this.CorreoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
-            this.CorreoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CorreoTextBox.ForeColor = System.Drawing.Color.White;
-            this.CorreoTextBox.Location = new System.Drawing.Point(317, 119);
-            this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(343, 27);
-            this.CorreoTextBox.TabIndex = 0;
+            this.UsuarioTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(94)))), ((int)(((byte)(129)))));
+            this.UsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsuarioTextBox.ForeColor = System.Drawing.Color.White;
+            this.UsuarioTextBox.Location = new System.Drawing.Point(317, 119);
+            this.UsuarioTextBox.Name = "UsuarioTextBox";
+            this.UsuarioTextBox.Size = new System.Drawing.Size(343, 27);
+            this.UsuarioTextBox.TabIndex = 0;
             // 
             // ClaveTextBox
             // 
@@ -177,7 +177,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ClaveTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.CorreoTextBox);
+            this.Controls.Add(this.UsuarioTextBox);
             this.Controls.Add(this.AccederButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AccederButton;
-        private System.Windows.Forms.TextBox CorreoTextBox;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
         private System.Windows.Forms.TextBox ClaveTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
